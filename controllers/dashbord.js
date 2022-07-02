@@ -88,7 +88,8 @@ exports.products = async (req, res, next) => {
 
         
     }
-    res.redirect('/users/login')
+    return res.redirect('/users/login')
+
 
 
 }
