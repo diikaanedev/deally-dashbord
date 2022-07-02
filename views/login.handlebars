@@ -1,0 +1,81 @@
+<main class="page-auth">
+            <div class="page-auth__center">
+                <div class="page-auth__gradient">
+                    <div class="page-auth__gradient-shape"></div>
+                    <div class="page-auth__gradient-shape"></div>
+                    <div class="auth-logo">
+                        <img class="auth-logo__icon" src="./assets/img/content/logotype.svg" width="44" alt="#" />
+                        <div class="auth-logo__text">arion</div>
+                    </div>
+                    <div class="page-auth__gradient-column"></div>
+                </div>
+                <div class="auth-card card">
+                    <div class="auth-card__shape"></div>
+                    <div class="auth-card__shape"></div>
+                    <div class="card__wrapper">
+                        <div class="auth-card__left">
+                            <div class="auth-card__logo">
+                                <div class="auth-logo">
+                                    <img class="auth-logo__icon" src="./assets/img/content/LOGO-FINAL.png" width="44" alt="#" />
+                                    <div class="auth-logo__text marker-blue" >Deally</div>
+                                </div>
+                            </div>
+                            <img class="auth-card__bg auth-bg-image-light" src="./assets/img/content/bg-auth.jpg" alt="#">
+                            <img class="auth-card__bg auth-bg-image-dark" src="./assets/img/content/bg-auth.jpg" alt="#">
+                        </div>
+                        <form action="/users/login" class="auth-card__right" method="POST" >
+                            <div class="auth-card__top">
+                                <h1 class="auth-card__title"><span class="text-theme">Deally </span></h1>
+                                <p class="auth-card__text">Welcome Back, Please login to your account.</p>
+                            </div>
+                            <div class="auth-card__body">
+                                <div class="form-group">
+                                    <div class="input-group input-group--prepend"><span class="input-group__prepend">
+                        <svg class="icon-icon-user">
+                          <use xlink:href="#icon-user"></use>
+                        </svg></span>
+                                        <input name="email" class="input" type="email" value="example@mail.com" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group input-group--prepend"><span class="input-group__prepend">
+                        <svg class="icon-icon-password">
+                          <use xlink:href="#icon-password"></use>
+                        </svg></span>
+                                        <input class="input" name="password" type="password" value="123456" required>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div class="input-group input-group--prepend">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" checked><span class="checkbox__marker"><span class="checkbox__marker-icon">
+                                <svg class="icon-icon-checked">
+                                  <use xlink:href="#icon-checked"></use>
+                                </svg></span></span><span class="ml-2">Remember Me</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="form-group"><a class="text-blue" href="/">Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="auth-card__bottom">
+                                <div class="auth-card__buttons">
+                                    <div class="auth-card__button"><a class="button button--secondary button--block" href="/"><span class="button__text">Sign Up</span></a>
+                                    </div>
+                                    <div class="auth-card__button">
+                                        <button class="button button--primary button--block" type="submit"><span class="button__text">Login</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>

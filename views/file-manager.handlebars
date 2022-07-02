@@ -1,0 +1,1836 @@
+<main class="page-content">
+    <div class="file-manager">
+        <aside class="sidebar-panel scrollbar-thin" id="sidebarPanel" data-simplebar="data-simplebar">
+            <div class="sidebar-panel__top">
+                <button class="button button--primary" data-modal="#addFiles"><span
+                        class="button__icon button__icon--left">
+                        <svg class="icon-icon-plus">
+                            <use xlink:href="#icon-plus"></use>
+                        </svg></span><span class="button__text">Upload File</span>
+                </button>
+            </div>
+            <div class="sidebar-panel__content">
+                <div class="sidebar-panel__nav">
+                    <h3 class="sidebar-panel__nav-title">Folders</h3>
+                    <ul class="sidebar-panel__menu sidebar-panel__menu--colors">
+                        <li class="sidebar-panel__menu-item">
+                            <a class="sidebar-panel__menu-link active" href="#">
+                                <svg class="icon-icon-folder text-grey-dark">
+                                    <use xlink:href="#icon-folder"></use>
+                                </svg><span class="sidebar-panel__menu-text">Files</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-panel__menu-item">
+                            <a class="sidebar-panel__menu-link" href="#">
+                                <svg class="icon-icon-folder text-red">
+                                    <use xlink:href="#icon-folder"></use>
+                                </svg><span class="sidebar-panel__menu-text">Images</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-panel__menu-item">
+                            <a class="sidebar-panel__menu-link" href="#">
+                                <svg class="icon-icon-folder text-teal">
+                                    <use xlink:href="#icon-folder"></use>
+                                </svg><span class="sidebar-panel__menu-text">Documents</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-panel__menu-item">
+                            <a class="sidebar-panel__menu-link" href="#">
+                                <svg class="icon-icon-folder text-green">
+                                    <use xlink:href="#icon-folder"></use>
+                                </svg><span class="sidebar-panel__menu-text">Projects</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-panel__menu-item">
+                            <a class="sidebar-panel__menu-link" href="#">
+                                <svg class="icon-icon-folder text-orange">
+                                    <use xlink:href="#icon-folder"></use>
+                                </svg><span class="sidebar-panel__menu-text">Design</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-panel__menu-item">
+                            <a class="sidebar-panel__menu-link" href="#">
+                                <svg class="icon-icon-folder text-grey-light">
+                                    <use xlink:href="#icon-folder"></use>
+                                </svg><span class="sidebar-panel__menu-text">Other</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-panel__bottom sidebar-panel__section">
+                <div class="media-progress">
+                    <h5 class="media-progress__title"><span class="text-clamp">Storage</span></h5>
+                    <div class="media-progress__percentage">30 %
+                    </div>
+                    <div class="media-progress__progressbar">
+                        <div class="media-progress__bar" style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="button button--secondary" type="button"><span class="button__text">Upgrade</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <div class="file-manager__content">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-header__title">Files <span class="text-grey">(50)</span></h1>
+                </div>
+                <div class="page-tools">
+                    <div class="page-tools__breadcrumbs">
+                        <div class="breadcrumbs">
+                            <div class="breadcrumbs__container">
+                                <ol class="breadcrumbs__list">
+                                    <li class="breadcrumbs__item">
+                                        <a class="breadcrumbs__link" href="index.html">
+                                            <svg class="icon-icon-home breadcrumbs__icon">
+                                                <use xlink:href="#icon-home"></use>
+                                            </svg>
+                                            <svg class="icon-icon-keyboard-right breadcrumbs__arrow">
+                                                <use xlink:href="#icon-keyboard-right"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="breadcrumbs__item disabled"><a class="breadcrumbs__link"
+                                            href="#"><span>File Manager</span>
+                                            <svg class="icon-icon-keyboard-right breadcrumbs__arrow">
+                                                <use xlink:href="#icon-keyboard-right"></use>
+                                            </svg></a>
+                                    </li>
+                                    <li class="breadcrumbs__item active"><span class="breadcrumbs__link">Files</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-tools__right">
+                        <ul class="page-tools__right-row nav" role="tablist">
+                            <li class="page-tools__right-item"><a class="button-icon" href="#tab-grid"
+                                    data-toggle="tab"><span class="button-icon__icon">
+                                        <svg class="icon-icon-grid">
+                                            <use xlink:href="#icon-grid"></use>
+                                        </svg></span></a>
+                            </li>
+                            <li class="page-tools__right-item"><a class="button-icon active" href="#tab-list"
+                                    data-toggle="tab"><span class="button-icon__icon">
+                                        <svg class="icon-icon-list">
+                                            <use xlink:href="#icon-list"></use>
+                                        </svg></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="toolbox">
+                    <div class="toolbox__row row gutter-bottom-xs">
+                        <div class="toolbox__left col-12 col-lg">
+                            <div class="toolbox__left-row row row--xs gutter-bottom-xs">
+                                <div class="form-group form-group--inline col col-sm-auto">
+                                    <div
+                                        class="input-group input-group--white input-group--prepend input-group--append">
+                                        <div class="input-group__prepend">
+                                            <svg class="icon-icon-calendar">
+                                                <use xlink:href="#icon-calendar"></use>
+                                            </svg>
+                                        </div>
+                                        <input class="input input--select" type="text" value="01.12.18 / 07.12.18"
+                                            readonly><span class="input-group__arrow">
+                                            <svg class="icon-icon-keyboard-down">
+                                                <use xlink:href="#icon-keyboard-down"></use>
+                                            </svg></span>
+                                    </div>
+                                </div>
+                                <div class="form-group form-group--inline col-12 col-sm-auto">
+                                    <div class="toolbox__status input-group input-group--white input-group--append">
+                                        <input class="input input--select" type="text" value="All type"
+                                            data-toggle="dropdown" readonly><span class="input-group__arrow">
+                                            <svg class="icon-icon-keyboard-down">
+                                                <use xlink:href="#icon-keyboard-down"></use>
+                                            </svg></span>
+                                        <div
+                                            class="dropdown-menu dropdown-menu--right dropdown-menu--fluid js-dropdown-select">
+                                            <a class="dropdown-menu__item active" href="#" tabindex="0"
+                                                data-value="All type">All type</a><a class="dropdown-menu__item"
+                                                href="#" tabindex="0" data-value="DOC">DOC</a><a
+                                                class="dropdown-menu__item" href="#" tabindex="0"
+                                                data-value="XLS">XLS</a><a class="dropdown-menu__item" href="#"
+                                                tabindex="0" data-value="PDF">PDF</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toolbox__right col-12 col-lg-auto">
+                            <div class="toolbox__right-row row row--xs flex-nowrap">
+                                <div class="col col-lg-auto">
+                                    <form class="toolbox__search" method="GET">
+                                        <div class="input-group input-group--white input-group--prepend">
+                                            <div class="input-group__prepend">
+                                                <svg class="icon-icon-search">
+                                                    <use xlink:href="#icon-search"></use>
+                                                </svg>
+                                            </div>
+                                            <input class="input" type="text" placeholder="Search Files">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-auto ml-auto">
+                                    <button class="button-add button-add--blue" data-modal="#addFiles"><span
+                                            class="button-add__icon">
+                                            <svg class="icon-icon-plus">
+                                                <use xlink:href="#icon-plus"></use>
+                                            </svg></span><span class="button-add__text"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-wrapper tab-content">
+                    <div class="tab-pane fade" id="tab-grid">
+                        <div class="file-manager__table table-wrapper__content table-collapse scrollbar-thin scrollbar-visible"
+                            data-simplebar>
+                            <table class="table table--spaces">
+                                <colgroup>
+                                    <col class="colgroup-1">
+                                    <col class="colgroup-2">
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead class="table__header">
+                                    <tr class="table__header-row">
+                                        <th>
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input class="js-checkbox-all" type="checkbox"
+                                                        data-checkbox-all="files"><span class="checkbox__marker"><span
+                                                            class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <th class="table__th-sort mw-200"><span class="align-middle">Name</span><span
+                                                class="sort sort--down"></span>
+                                        </th>
+                                        <th class="table__th-sort"><span class="align-middle">Size</span><span
+                                                class="sort sort--down"></span>
+                                        </th>
+                                        <th class="table__th-sort"><span class="align-middle">Type</span><span
+                                                class="sort sort--down"></span>
+                                        </th>
+                                        <th class="table__th-sort"><span class="align-middle">Modified</span><span
+                                                class="sort sort--down"></span>
+                                        </th>
+                                        <th class="table__actions"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table__row">
+                                        <td class="table__td">
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" data-checkbox="files"><span
+                                                        class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="table__td">
+                                            <div class="media-item media-item--file">
+                                                <div class="media-item__icon-folder">
+                                                    <svg class="icon-icon-folder text-orange">
+                                                        <use xlink:href="#icon-folder"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="media-item__right">
+                                                    <h5 class="media-item__title"><span class="text-clamp">Sketch
+                                                            Templates</span></h5>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table__td text-grey text-uppercase">8 GB</td>
+                                        <td class="table__td text-uppercase">Folder</td>
+                                        <td class="table__td text-grey">
+                                            <time class="text-nowrap" datetime="2019-07-12">12.07.2019</time>
+                                        </td>
+                                        <td class="table__td table__actions">
+                                            <div class="items-more">
+                                                <button class="items-more__button">
+                                                    <svg class="icon-icon-more">
+                                                        <use xlink:href="#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-items dropdown-items--right">
+                                                    <div class="dropdown-items__container">
+                                                        <ul class="dropdown-items__list">
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-duplicate">
+                                                                            <use xlink:href="#icon-duplicate"></use>
+                                                                        </svg></span>Duplicate</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-archive">
+                                                                            <use xlink:href="#icon-archive"></use>
+                                                                        </svg></span>Archive</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-trash">
+                                                                            <use xlink:href="#icon-trash"></use>
+                                                                        </svg></span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__space">
+                                        <td colspan="6"></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__td">
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" data-checkbox="files"><span
+                                                        class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="table__td">
+                                            <div class="media-item media-item--file">
+                                                <div class="media-item__icon-folder">
+                                                    <svg class="icon-icon-folder text-orange">
+                                                        <use xlink:href="#icon-folder"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="media-item__right">
+                                                    <h5 class="media-item__title"><span class="text-clamp">Public
+                                                            Documents</span></h5>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table__td text-grey text-uppercase">10 GB</td>
+                                        <td class="table__td text-uppercase">Folder</td>
+                                        <td class="table__td text-grey">
+                                            <time class="text-nowrap" datetime="2019-07-12">12.07.2019</time>
+                                        </td>
+                                        <td class="table__td table__actions">
+                                            <div class="items-more">
+                                                <button class="items-more__button">
+                                                    <svg class="icon-icon-more">
+                                                        <use xlink:href="#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-items dropdown-items--right">
+                                                    <div class="dropdown-items__container">
+                                                        <ul class="dropdown-items__list">
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-duplicate">
+                                                                            <use xlink:href="#icon-duplicate"></use>
+                                                                        </svg></span>Duplicate</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-archive">
+                                                                            <use xlink:href="#icon-archive"></use>
+                                                                        </svg></span>Archive</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-trash">
+                                                                            <use xlink:href="#icon-trash"></use>
+                                                                        </svg></span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__space">
+                                        <td colspan="6"></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__td">
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" data-checkbox="files"><span
+                                                        class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="table__td">
+                                            <div class="media-item media-item--file">
+                                                <div class="media-item__icon-folder">
+                                                    <svg class="icon-icon-folder text-orange">
+                                                        <use xlink:href="#icon-folder"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="media-item__right">
+                                                    <h5 class="media-item__title"><span
+                                                            class="text-clamp">Backups</span></h5>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table__td text-grey text-uppercase">1 TB</td>
+                                        <td class="table__td text-uppercase">Folder</td>
+                                        <td class="table__td text-grey">
+                                            <time class="text-nowrap" datetime="2019-07-12">12.07.2019</time>
+                                        </td>
+                                        <td class="table__td table__actions">
+                                            <div class="items-more">
+                                                <button class="items-more__button">
+                                                    <svg class="icon-icon-more">
+                                                        <use xlink:href="#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-items dropdown-items--right">
+                                                    <div class="dropdown-items__container">
+                                                        <ul class="dropdown-items__list">
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-duplicate">
+                                                                            <use xlink:href="#icon-duplicate"></use>
+                                                                        </svg></span>Duplicate</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-archive">
+                                                                            <use xlink:href="#icon-archive"></use>
+                                                                        </svg></span>Archive</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-trash">
+                                                                            <use xlink:href="#icon-trash"></use>
+                                                                        </svg></span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__space">
+                                        <td colspan="6"></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__td">
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" data-checkbox="files"><span
+                                                        class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="table__td">
+                                            <div class="media-item media-item--file">
+                                                <div class="media-item__icon-folder">
+                                                    <svg class="icon-icon-folder text-orange">
+                                                        <use xlink:href="#icon-folder"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="media-item__right">
+                                                    <h5 class="media-item__title"><span
+                                                            class="text-clamp">Downloads</span></h5>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table__td text-grey text-uppercase">250 GB</td>
+                                        <td class="table__td text-uppercase">Folder</td>
+                                        <td class="table__td text-grey">
+                                            <time class="text-nowrap" datetime="2019-07-12">12.07.2019</time>
+                                        </td>
+                                        <td class="table__td table__actions">
+                                            <div class="items-more">
+                                                <button class="items-more__button">
+                                                    <svg class="icon-icon-more">
+                                                        <use xlink:href="#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-items dropdown-items--right">
+                                                    <div class="dropdown-items__container">
+                                                        <ul class="dropdown-items__list">
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-duplicate">
+                                                                            <use xlink:href="#icon-duplicate"></use>
+                                                                        </svg></span>Duplicate</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-archive">
+                                                                            <use xlink:href="#icon-archive"></use>
+                                                                        </svg></span>Archive</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-trash">
+                                                                            <use xlink:href="#icon-trash"></use>
+                                                                        </svg></span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__space">
+                                        <td colspan="6"></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__td">
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" data-checkbox="files"><span
+                                                        class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="table__td">
+                                            <div class="media-item media-item--file">
+                                                <div class="media-item__icon-folder">
+                                                    <svg class="icon-icon-folder text-orange">
+                                                        <use xlink:href="#icon-folder"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="media-item__right">
+                                                    <h5 class="media-item__title"><span
+                                                            class="text-clamp">Resources</span></h5>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table__td text-grey text-uppercase">4 GB</td>
+                                        <td class="table__td text-uppercase">Folder</td>
+                                        <td class="table__td text-grey">
+                                            <time class="text-nowrap" datetime="2019-07-12">12.07.2019</time>
+                                        </td>
+                                        <td class="table__td table__actions">
+                                            <div class="items-more">
+                                                <button class="items-more__button">
+                                                    <svg class="icon-icon-more">
+                                                        <use xlink:href="#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-items dropdown-items--right">
+                                                    <div class="dropdown-items__container">
+                                                        <ul class="dropdown-items__list">
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-duplicate">
+                                                                            <use xlink:href="#icon-duplicate"></use>
+                                                                        </svg></span>Duplicate</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-archive">
+                                                                            <use xlink:href="#icon-archive"></use>
+                                                                        </svg></span>Archive</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-trash">
+                                                                            <use xlink:href="#icon-trash"></use>
+                                                                        </svg></span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__space">
+                                        <td colspan="6"></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__td">
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" data-checkbox="files"><span
+                                                        class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="table__td">
+                                            <div class="media-item media-item--file">
+                                                <div class="media-item__icon-file">
+                                                    <svg class="icon-icon-doc">
+                                                        <use xlink:href="#icon-doc"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="media-item__right">
+                                                    <h5 class="media-item__title"><span class="text-clamp">Shopping
+                                                            _list</span></h5>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table__td text-grey text-uppercase">1 MB</td>
+                                        <td class="table__td text-uppercase">DOC</td>
+                                        <td class="table__td text-grey">
+                                            <time class="text-nowrap" datetime="2019-07-12">12.07.2019</time>
+                                        </td>
+                                        <td class="table__td table__actions">
+                                            <div class="items-more">
+                                                <button class="items-more__button">
+                                                    <svg class="icon-icon-more">
+                                                        <use xlink:href="#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-items dropdown-items--right">
+                                                    <div class="dropdown-items__container">
+                                                        <ul class="dropdown-items__list">
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-duplicate">
+                                                                            <use xlink:href="#icon-duplicate"></use>
+                                                                        </svg></span>Duplicate</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-archive">
+                                                                            <use xlink:href="#icon-archive"></use>
+                                                                        </svg></span>Archive</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-trash">
+                                                                            <use xlink:href="#icon-trash"></use>
+                                                                        </svg></span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__space">
+                                        <td colspan="6"></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__td">
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" data-checkbox="files"><span
+                                                        class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="table__td">
+                                            <div class="media-item media-item--file">
+                                                <div class="media-item__icon-file">
+                                                    <svg class="icon-icon-doc">
+                                                        <use xlink:href="#icon-doc"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="media-item__right">
+                                                    <h5 class="media-item__title"><span
+                                                            class="text-clamp">Design_brief</span></h5>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table__td text-grey text-uppercase">150 KB</td>
+                                        <td class="table__td text-uppercase">DOC</td>
+                                        <td class="table__td text-grey">
+                                            <time class="text-nowrap" datetime="2019-07-12">12.07.2019</time>
+                                        </td>
+                                        <td class="table__td table__actions">
+                                            <div class="items-more">
+                                                <button class="items-more__button">
+                                                    <svg class="icon-icon-more">
+                                                        <use xlink:href="#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-items dropdown-items--right">
+                                                    <div class="dropdown-items__container">
+                                                        <ul class="dropdown-items__list">
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-duplicate">
+                                                                            <use xlink:href="#icon-duplicate"></use>
+                                                                        </svg></span>Duplicate</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-archive">
+                                                                            <use xlink:href="#icon-archive"></use>
+                                                                        </svg></span>Archive</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-trash">
+                                                                            <use xlink:href="#icon-trash"></use>
+                                                                        </svg></span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__space">
+                                        <td colspan="6"></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__td">
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" data-checkbox="files"><span
+                                                        class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="table__td">
+                                            <div class="media-item media-item--file">
+                                                <div class="media-item__icon-file">
+                                                    <svg class="icon-icon-xls">
+                                                        <use xlink:href="#icon-xls"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="media-item__right">
+                                                    <h5 class="media-item__title"><span class="text-clamp">Prices</span>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table__td text-grey text-uppercase">1 MB</td>
+                                        <td class="table__td text-uppercase">XLS</td>
+                                        <td class="table__td text-grey">
+                                            <time class="text-nowrap" datetime="2019-07-12">12.07.2019</time>
+                                        </td>
+                                        <td class="table__td table__actions">
+                                            <div class="items-more">
+                                                <button class="items-more__button">
+                                                    <svg class="icon-icon-more">
+                                                        <use xlink:href="#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-items dropdown-items--right dropdown-items--up">
+                                                    <div class="dropdown-items__container">
+                                                        <ul class="dropdown-items__list">
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-duplicate">
+                                                                            <use xlink:href="#icon-duplicate"></use>
+                                                                        </svg></span>Duplicate</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-archive">
+                                                                            <use xlink:href="#icon-archive"></use>
+                                                                        </svg></span>Archive</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-trash">
+                                                                            <use xlink:href="#icon-trash"></use>
+                                                                        </svg></span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__space">
+                                        <td colspan="6"></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__td">
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" data-checkbox="files"><span
+                                                        class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="table__td">
+                                            <div class="media-item media-item--file">
+                                                <div class="media-item__icon-file">
+                                                    <svg class="icon-icon-pdf">
+                                                        <use xlink:href="#icon-pdf"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="media-item__right">
+                                                    <h5 class="media-item__title"><span
+                                                            class="text-clamp">01_project_description</span></h5>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table__td text-grey text-uppercase">150 MB</td>
+                                        <td class="table__td text-uppercase">PDF</td>
+                                        <td class="table__td text-grey">
+                                            <time class="text-nowrap" datetime="2019-07-12">12.07.2019</time>
+                                        </td>
+                                        <td class="table__td table__actions">
+                                            <div class="items-more">
+                                                <button class="items-more__button">
+                                                    <svg class="icon-icon-more">
+                                                        <use xlink:href="#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-items dropdown-items--right dropdown-items--up">
+                                                    <div class="dropdown-items__container">
+                                                        <ul class="dropdown-items__list">
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-duplicate">
+                                                                            <use xlink:href="#icon-duplicate"></use>
+                                                                        </svg></span>Duplicate</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-archive">
+                                                                            <use xlink:href="#icon-archive"></use>
+                                                                        </svg></span>Archive</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-trash">
+                                                                            <use xlink:href="#icon-trash"></use>
+                                                                        </svg></span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="table__space">
+                                        <td colspan="6"></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__td">
+                                            <div class="table__checkbox table__checkbox--all">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" data-checkbox="files"><span
+                                                        class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                            <svg class="icon-icon-checked">
+                                                                <use xlink:href="#icon-checked"></use>
+                                                            </svg></span></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="table__td">
+                                            <div class="media-item media-item--file">
+                                                <div class="media-item__icon-file">
+                                                    <svg class="icon-icon-pdf">
+                                                        <use xlink:href="#icon-pdf"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="media-item__right">
+                                                    <h5 class="media-item__title"><span
+                                                            class="text-clamp">02_project_description</span></h5>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table__td text-grey text-uppercase">160 MB</td>
+                                        <td class="table__td text-uppercase">PDF</td>
+                                        <td class="table__td text-grey">
+                                            <time class="text-nowrap" datetime="2019-07-12">12.07.2019</time>
+                                        </td>
+                                        <td class="table__td table__actions">
+                                            <div class="items-more">
+                                                <button class="items-more__button">
+                                                    <svg class="icon-icon-more">
+                                                        <use xlink:href="#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-items dropdown-items--right dropdown-items--up">
+                                                    <div class="dropdown-items__container">
+                                                        <ul class="dropdown-items__list">
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-duplicate">
+                                                                            <use xlink:href="#icon-duplicate"></use>
+                                                                        </svg></span>Duplicate</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-archive">
+                                                                            <use xlink:href="#icon-archive"></use>
+                                                                        </svg></span>Archive</a>
+                                                            </li>
+                                                            <li class="dropdown-items__item"><a
+                                                                    class="dropdown-items__link"><span
+                                                                        class="dropdown-items__link-icon">
+                                                                        <svg class="icon-icon-trash">
+                                                                            <use xlink:href="#icon-trash"></use>
+                                                                        </svg></span>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane active" id="tab-list">
+                        <section class="file-manager__section">
+                            <h3 class="file-manager__section-title">Folders</h3>
+                            <div class="file-manager__section-cards">
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" checked="checked" /><span
+                                                    class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon">
+                                            <svg class="icon-icon-folder">
+                                                <use xlink:href="#icon-folder"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Sketch Templates</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">8 GB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" checked="checked" /><span
+                                                    class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon">
+                                            <svg class="icon-icon-folder">
+                                                <use xlink:href="#icon-folder"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Public Documents</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">10 GB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" /><span class="checkbox__marker"><span
+                                                        class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon">
+                                            <svg class="icon-icon-folder">
+                                                <use xlink:href="#icon-folder"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Backups</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">1 TB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" /><span class="checkbox__marker"><span
+                                                        class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon">
+                                            <svg class="icon-icon-folder">
+                                                <use xlink:href="#icon-folder"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Downloads</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">250 GB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" /><span class="checkbox__marker"><span
+                                                        class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon">
+                                            <svg class="icon-icon-folder">
+                                                <use xlink:href="#icon-folder"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Resources</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">4 GB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="file-manager__section">
+                            <h3 class="file-manager__section-title">Files</h3>
+                            <div class="file-manager__section-cards">
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" checked="checked" /><span
+                                                    class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon files-card__icon--file">
+                                            <svg class="icon-icon-doc">
+                                                <use xlink:href="#icon-doc"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Shopping_list</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">1 MB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" checked="checked" /><span
+                                                    class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon files-card__icon--file">
+                                            <svg class="icon-icon-doc">
+                                                <use xlink:href="#icon-doc"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Design_brief</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">150 KB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" checked="checked" /><span
+                                                    class="checkbox__marker"><span class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon files-card__icon--file">
+                                            <svg class="icon-icon-xls">
+                                                <use xlink:href="#icon-xls"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Prices</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">1 MB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" /><span class="checkbox__marker"><span
+                                                        class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon files-card__icon--file">
+                                            <svg class="icon-icon-pdf">
+                                                <use xlink:href="#icon-pdf"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">01_project_description</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">150 MB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" /><span class="checkbox__marker"><span
+                                                        class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon files-card__icon--file">
+                                            <svg class="icon-icon-pdf">
+                                                <use xlink:href="#icon-pdf"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">02_project_description</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">160 MB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" /><span class="checkbox__marker"><span
+                                                        class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon files-card__icon--file">
+                                            <svg class="icon-icon-doc">
+                                                <use xlink:href="#icon-doc"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Design_brief</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">170 KB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" /><span class="checkbox__marker"><span
+                                                        class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon files-card__icon--file">
+                                            <svg class="icon-icon-pdf">
+                                                <use xlink:href="#icon-pdf"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">01_project_description</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">140 MB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" /><span class="checkbox__marker"><span
+                                                        class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon files-card__icon--file">
+                                            <svg class="icon-icon-xls">
+                                                <use xlink:href="#icon-xls"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Prices</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">2 MB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" /><span class="checkbox__marker"><span
+                                                        class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon files-card__icon--file">
+                                            <svg class="icon-icon-doc">
+                                                <use xlink:href="#icon-doc"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">Shopping_list</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">950 KB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="files-card">
+                                    <div class="files-card__content">
+                                        <div class="files-card__checkbox-wrapper">
+                                            <label class="checkbox checkbox--circle">
+                                                <input type="checkbox" /><span class="checkbox__marker"><span
+                                                        class="checkbox__marker-icon">
+                                                        <svg class="icon-icon-checked">
+                                                            <use xlink:href="#icon-checked"></use>
+                                                        </svg></span></span>
+                                            </label>
+                                        </div>
+                                        <div class="files-card__more">
+                                            <button class="items-more__button">
+                                                <svg class="icon-icon-dots">
+                                                    <use xlink:href="#icon-dots"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-items dropdown-items--right">
+                                                <div class="dropdown-items__container">
+                                                    <ul class="dropdown-items__list">
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-duplicate">
+                                                                        <use xlink:href="#icon-duplicate"></use>
+                                                                    </svg></span>Duplicate</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-archive">
+                                                                        <use xlink:href="#icon-archive"></use>
+                                                                    </svg></span>Archive</a>
+                                                        </li>
+                                                        <li class="dropdown-items__item"><a
+                                                                class="dropdown-items__link"><span
+                                                                    class="dropdown-items__link-icon">
+                                                                    <svg class="icon-icon-trash">
+                                                                        <use xlink:href="#icon-trash"></use>
+                                                                    </svg></span>Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="files-card__icon files-card__icon--file">
+                                            <svg class="icon-icon-pdf">
+                                                <use xlink:href="#icon-pdf"></use>
+                                            </svg>
+                                        </div>
+                                        <h5 class="files-card__title">02_project_description</h5>
+                                        <div class="files-card__bottom">
+                                            <div class="files-card__size">190 MB</div>
+                                            <div class="files-card__date">
+                                                <time datetime="2019-07-12">12.07.2019</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="backdrop-sidebar-panel"></div>
+    </div>
+</main>

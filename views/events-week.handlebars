@@ -1,0 +1,527 @@
+ <main class="page-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-header__title">Evenements</h1>
+                </div>
+                <div class="calendar-toolbox">
+                    <div class="calendar-toolbox__row row gutter-bottom-xs align-items-center">
+                        <div class="calendar-toolbox__left col col-md-4">
+                            <div class="d-none d-lg-block">
+                                <div class="switcher-button switcher-button--light">
+                                    <div class="switcher-button__items">
+                                        <div class="switcher-button__float"></div>
+                                        <div class="switcher-button__item"><a class="switcher-button__btn" href="/events">Month</a>
+                                        </div>
+                                        <div class="switcher-button__item active"><a class="switcher-button__btn" href="/events-week">Week</a>
+                                        </div>
+                                        <div class="switcher-button__item"><a class="switcher-button__btn" href="/events-day">Day</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-lg-none">
+                                <div class="items-more">
+                                    <button class="items-more__button">
+                                        <svg class="icon-icon-more">
+                                            <use xlink:href="#icon-more"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="dropdown-items dropdown-items--left">
+                                        <div class="dropdown-items__container">
+                                            <ul class="dropdown-items__list">
+                                                <li class="dropdown-items__item"><a class="dropdown-items__link" href="/events">Month</a>
+                                                </li>
+                                                <li class="dropdown-items__item"><a class="dropdown-items__link" href="/events-week">Week</a>
+                                                </li>
+                                                <li class="dropdown-items__item"><a class="dropdown-items__link" href="/events-day">Day</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-4 d-flex justify-content-center">
+                            <div class="calendar-toolbox__date">
+                                <div class="calendar-toolbox__month">November</div>
+                                <div class="calendar-toolbox__year">2019</div>
+                            </div>
+                        </div>
+                        <div class="calendar-toolbox__right col col-md-4 d-flex justify-content-end">
+                            <div class="row row--xs flex-nowrap">
+                                <div class="col-auto position-static">
+                                    <div class="switcher-date">
+                                        <div class="switcher-date__controls">
+                                            <button class="switcher-date__btn switcher-date__btn--prev" type="button" data-toggle="prev">
+                                                <svg class="icon-icon-keyboard-left">
+                                                    <use xlink:href="#icon-keyboard-left"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="switcher-date__input-group">
+                                                <svg class="icon-icon-calendar">
+                                                    <use xlink:href="#icon-calendar"></use>
+                                                </svg>
+                                                <button class="switcher-date__input">November</button>
+                                            </div>
+                                            <button class="switcher-date__btn switcher-date__btn--next" type="button" data-toggle="next">
+                                                <svg class="icon-icon-keyboard-right">
+                                                    <use xlink:href="#icon-keyboard-right"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <select class="input js-input-select" data-placeholder="">
+                                            <option value="1">January
+                                            </option>
+                                            <option value="2">February
+                                            </option>
+                                            <option value="3">March
+                                            </option>
+                                            <option value="4">April
+                                            </option>
+                                            <option value="5">May
+                                            </option>
+                                            <option value="6">June
+                                            </option>
+                                            <option value="7">July
+                                            </option>
+                                            <option value="8">August
+                                            </option>
+                                            <option value="9">September
+                                            </option>
+                                            <option value="10">October
+                                            </option>
+                                            <option value="11" selected="selected">November
+                                            </option>
+                                            <option value="12">December
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="button-add button-add--blue" data-modal="#addEvent"><span class="button-add__icon">
+                        <svg class="icon-icon-plus">
+                          <use xlink:href="#icon-plus"></use>
+                        </svg></span><span class="button-add__text"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar calendar--timeline card">
+                    <div class="calendar__wrapper card__wrapper scrollbar-thin" data-simplebar>
+                        <div class="calendar__content">
+                            <div class="calendar__top-week">
+                                <div class="calendar__top-week-hours">
+                                    <svg class="icon-icon-clock">
+                                        <use xlink:href="#icon-clock"></use>
+                                    </svg>
+                                </div>
+                                <div class="calendar__top-week-day"><span>Sunday</span>, 1</div>
+                                <div class="calendar__top-week-day"><span>Monday</span>, 2</div>
+                                <div class="calendar__top-week-day"><span>Tuesday</span>, 3</div>
+                                <div class="calendar__top-week-day"><span>Wednesday</span>, 4</div>
+                                <div class="calendar__top-week-day"><span>Thursday</span>, 5</div>
+                                <div class="calendar__top-week-day"><span>Friday</span>, 6</div>
+                                <div class="calendar__top-week-day"><span>Saturday</span>, 7</div>
+                            </div>
+                            <div class="calendar__content-wrapper scrollbar-thin" data-simplebar>
+                                <div class="calendar__timeline">
+                                    <div class="calendar__timeline-left">
+                                        <div class="calendar__timeline-time">01:00
+                                        </div>
+                                        <div class="calendar__timeline-time">02:00
+                                        </div>
+                                        <div class="calendar__timeline-time">03:00
+                                        </div>
+                                        <div class="calendar__timeline-time">04:00
+                                        </div>
+                                        <div class="calendar__timeline-time">05:00
+                                        </div>
+                                        <div class="calendar__timeline-time">06:00
+                                        </div>
+                                        <div class="calendar__timeline-time">07:00
+                                        </div>
+                                        <div class="calendar__timeline-time">08:00
+                                        </div>
+                                        <div class="calendar__timeline-time">09:00
+                                        </div>
+                                        <div class="calendar__timeline-time">10:00
+                                        </div>
+                                        <div class="calendar__timeline-time">11:00
+                                        </div>
+                                        <div class="calendar__timeline-time">12:00
+                                        </div>
+                                    </div>
+                                    <div class="calendar__timeline-grid">
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                            <a class="c-event c-event--time color-teal" href="#calendarPopupEvent" data-color="color-teal" style="width: calc(200% - 8px); height: calc(100% - 8px)">
+                                                <div class="c-event__name"><span>New Event</span>
+                                                </div>
+                                                <div class="c-event__time">10:00</div>
+                                            </a>
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                            <a class="c-event c-event--time color-teal" href="#calendarPopupEvent" data-color="color-teal" style="width: calc(100% - 8px); height: calc(200% - 8px)">
+                                                <div class="c-event__name"><span>New Event</span>
+                                                </div>
+                                                <div class="c-event__time">10:00</div>
+                                            </a>
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                            <a class="c-event c-event--time color-orange" href="#calendarPopupEvent" data-color="color-orange" style="width: calc(100% - 8px); height: calc(900% - 8px);">
+                                                <div class="c-event__name"><span>New Event</span>
+                                                </div>
+                                                <div class="c-event__time">10:00</div>
+                                            </a>
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                            <a class="c-event c-event--time c-event--active color-green" href="#calendarPopupEvent" data-color="color-green" style="width: calc(100% - 8px); height: calc(100% - 8px)">
+                                                <div class="c-event__name"><span>New Event</span>
+                                                </div>
+                                                <div class="c-event__time">10:00</div>
+                                                <div class="c-event__tools color-green">
+                                                    <div class="button-icon" data-modal="#addEvent"><span class="button-icon__icon">
+                                <svg class="icon-icon-task">
+                                  <use xlink:href="#icon-task"></use>
+                                </svg></span>
+                                                    </div>
+                                                    <div class="button-icon" data-target="remove"><span class="button-icon__icon">
+                                <svg class="icon-icon-trash">
+                                  <use xlink:href="#icon-trash"></use>
+                                </svg></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                            <a class="c-event c-event--time c-event--draggable color-red" href="#calendarPopupEvent" data-color="color-red" style="width: calc(100% - 8px); height: calc(600% - 8px);">
+                                                <div class="c-event__name"><span>New Event</span>
+                                                </div>
+                                                <div class="c-event__time">10:00</div>
+                                            </a>
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                            <div class="calendar__timeline-cell-divider color-red" style="width: 100%;"></div>
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                            <div class="c-event-drop" style="width: calc(100% - 8px); height: calc(500% - 8px);"></div>
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                        <div class="calendar__timeline-cell">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-c-event" id="calendarPopupEvent">
+                        <div class="dropdown-c-event__arrow"></div>
+                        <div class="dropdown-c-event__content">
+                            <div class="dropdown-c-event__top">
+                                <div class="dropdown-c-event__date">
+                                    <div class="dropdown-c-event__month">November</div>
+                                    <div class="dropdown-c-event__day">3</div>
+                                </div>
+                                <div class="dropdown-c-event__top-right">
+                                    <h3 class="dropdown-c-event__name">New Event</h3>
+                                    <div class="dropdown-c-event__time">
+                                        <svg class="icon-icon-bell">
+                                            <use xlink:href="#icon-bell"></use>
+                                        </svg>8:30
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-c-event__note">
+                                <h4 class="dropdown-c-event__title">Note</h4>
+                                <div class="dropdown-c-event__text">Sending order (#25789) Felecia Burke at 12:00</div>
+                            </div>
+                            <div class="dropdown-c-event__footer">
+                                <h4 class="dropdown-c-event__title">Date of event</h4>
+                                <div class="dropdown-c-event__text">Nov 02 2019 — Nov 03 2019</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    <div class="modal modal-compact modal-add-event scrollbar-thin" id="addEvent" data-simplebar>
+        <div class="modal__overlay" data-dismiss="modal"></div>
+        <div class="modal__wrap">
+            <div class="modal__window">
+                <div class="modal__content">
+                    <button class="modal__close" data-dismiss="modal">
+                        <svg class="icon-icon-cross">
+                            <use xlink:href="#icon-cross"></use>
+                        </svg>
+                    </button>
+                    <div class="modal__header">
+                        <div class="modal__container">
+                            <h2 class="modal__title">Add Event</h2>
+                        </div>
+                    </div>
+                    <div class="modal__body">
+                        <div class="modal__container">
+                            <form method="POST">
+                                <div class="row">
+                                    <div class="col-12 form-group form-group--lg">
+                                        <label class="form-label form-label--sm">Title</label>
+                                        <div class="input-group">
+                                            <input class="input" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group form-group--lg">
+                                        <label class="form-label form-label--sm">Note</label>
+                                        <div class="input-group">
+                                            <textarea class="input" rows="6" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group form-group--lg">
+                                        <label class="form-label form-label--sm">Event type</label>
+                                        <div class="input-events">
+                                            <label class="input-events__item color-red" data-tippy-content="Important" data-tippy-placement="top">
+                                                <input type="radio" name="add-event"><span class="input-events__item-marker"></span>
+                                            </label>
+                                            <label class="input-events__item color-teal" data-tippy-content="Meeting" data-tippy-placement="top">
+                                                <input type="radio" name="add-event"><span class="input-events__item-marker"></span>
+                                            </label>
+                                            <label class="input-events__item color-green" data-tippy-content="Event" data-tippy-placement="top">
+                                                <input type="radio" name="add-event"><span class="input-events__item-marker"></span>
+                                            </label>
+                                            <label class="input-events__item color-orange" data-tippy-content="Work" data-tippy-placement="top">
+                                                <input type="radio" name="add-event"><span class="input-events__item-marker"></span>
+                                            </label>
+                                            <label class="input-events__item color-grey-light" data-tippy-content="Other" data-tippy-placement="top">
+                                                <input type="radio" name="add-event"><span class="input-events__item-marker"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 form-group form-group--lg">
+                                        <label class="form-label form-label--sm">Start date</label>
+                                        <div class="input-group input-group--prepend">
+                                            <div class="input-group__prepend input-group__prepend--default">
+                                                <svg class="icon-icon-calendar">
+                                                    <use xlink:href="#icon-calendar"></use>
+                                                </svg>
+                                            </div>
+                                            <input class="input" type="text" value="02.11.19" readonly><span class="input-group__arrow">
+                          <svg class="icon-icon-keyboard-down">
+                            <use xlink:href="#icon-keyboard-down"></use>
+                          </svg></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 form-group form-group--lg">
+                                        <label class="form-label form-label--sm">Start time</label>
+                                        <div class="input-group input-group--prepend">
+                                            <div class="input-group__prepend input-group__prepend--default">
+                                                <svg class="icon-icon-clock">
+                                                    <use xlink:href="#icon-clock"></use>
+                                                </svg>
+                                            </div>
+                                            <input class="input" type="time" required><span class="input-group__arrows"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 form-group form-group--lg">
+                                        <label class="form-label form-label--sm">End date</label>
+                                        <div class="input-group input-group--prepend">
+                                            <div class="input-group__prepend input-group__prepend--default">
+                                                <svg class="icon-icon-calendar">
+                                                    <use xlink:href="#icon-calendar"></use>
+                                                </svg>
+                                            </div>
+                                            <input class="input" type="text" value="03.11.19" readonly><span class="input-group__arrow">
+                          <svg class="icon-icon-keyboard-down">
+                            <use xlink:href="#icon-keyboard-down"></use>
+                          </svg></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 form-group form-group--lg">
+                                        <label class="form-label form-label--sm">End time</label>
+                                        <div class="input-group input-group--prepend">
+                                            <div class="input-group__prepend input-group__prepend--default">
+                                                <svg class="icon-icon-clock">
+                                                    <use xlink:href="#icon-clock"></use>
+                                                </svg>
+                                            </div>
+                                            <input class="input" type="time" required><span class="input-group__arrows"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group form-group--lg form-group--inline">
+                                        <label class="form-label form-label--append">All day</label>
+                                        <label class="checkbox-toggle">
+                                            <input type="checkbox"><span class="checkbox-toggle__range"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal__footer pt-0">
+                        <div class="modal__container">
+                            <div class="modal__footer-buttons">
+                                <div class="modal__footer-button"></div>
+                                <div class="modal__footer-button">
+                                    <button class="button button--primary button--block" type="submit"><span class="button__icon button__icon--left">
+                        <svg class="icon-icon-plus">
+                          <use xlink:href="#icon-plus"></use>
+                        </svg></span><span class="button__text">Add Event</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
