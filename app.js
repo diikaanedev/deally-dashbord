@@ -99,8 +99,9 @@ app.use('/' , (req ,res , next ) => {
 
 // app.use('/categories' , categorieRoute );
 // app.use('/products' , productRoute);
+const port = process.env.PORT
 
-app.listen(6550, () => {
+app.listen(port, () => {
 	console.log(`Server started on 6550 `);
 });
 
