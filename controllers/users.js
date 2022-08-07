@@ -11,6 +11,12 @@ exports.login = async (req, res ,next ) => {
 	});
 }
 
+exports.logout = async (req, res ,next ) => {
+    console.log("eertsigfdfghjklkjgfddfhjkjgfd");
+    req.session.destroy();
+    return  res.redirect('/');
+}
+
 exports.register = async (req, res , next ) => {
 
     if (req.session.auth) {

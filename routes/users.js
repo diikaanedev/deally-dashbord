@@ -6,6 +6,7 @@ const routes = new Router();
 
 // Add routes
 routes.get('/login', userCtrl.login);
+routes.get('/log-out', userCtrl.logout);
 routes.get('/register', userCtrl.register);
 routes.get('/password', userCtrl.password);
 routes.post('/login', userCtrl.postLogin);
