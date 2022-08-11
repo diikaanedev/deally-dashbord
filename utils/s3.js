@@ -69,7 +69,7 @@ const  uploadFile = async (file) =>  {
       const uploadParams180 = {
         Bucket: bucketName,
         Body: b,
-        Key:  'deally/'+ fileName+'-180.webp'
+        Key:  fileName+'-180.webp'
       };
       const a = await  s3.upload(uploadParams180).promise();
       const path ='uploads/'+fileName+'-180.webp';
@@ -82,7 +82,7 @@ const  uploadFile = async (file) =>  {
         width : 100,
       }).
     toFormat('webp')
-    .toFile(`uploads/${fileName}-100.webp`, (err, info) => {
+    .toFile(`${fileName}-100.webp`, (err, info) => {
 
         if (err) {
             console.log("err => ", err);
@@ -114,7 +114,7 @@ const  uploadFile = async (file) =>  {
 
     fs.unlinkSync(file.path);
 
-  return `https://cac-e-shop-by-intech.s3.amazonaws.com/deally/${fileName}-300.webp`;
+  return `https://cac-e-shop-by-intech.s3.amazonaws.com/${fileName}-300.webp`;
 }
 exports.uploadFile = uploadFile
 
