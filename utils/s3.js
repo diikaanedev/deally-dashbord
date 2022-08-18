@@ -51,55 +51,55 @@ const  uploadFile = async (file) =>  {
       
     });
 
-    await  sharp(fs.readFileSync(file.path)).resize(
-      {
-        height :  300,
-        width : 300,
-      }).
-    toFormat('webp')
-    .toFile(`uploads/${fileName}-180.webp`, (err, info) => {
+    // await  sharp(fs.readFileSync(file.path)).resize(
+    //   {
+    //     height :  300,
+    //     width : 300,
+    //   }).
+    // toFormat('webp')
+    // .toFile(`uploads/${fileName}-180.webp`, (err, info) => {
 
-        if (err) {
-            console.log("err => ", err);
-        }
+    //     if (err) {
+    //         console.log("err => ", err);
+    //     }
 
-        // console.log("info =>" , info);
+    //     // console.log("info =>" , info);
 
-    }).toBuffer().then(async b => {
-      const uploadParams180 = {
-        Bucket: bucketName,
-        Body: b,
-        Key:  fileName+'-180.webp'
-      };
-      const a = await  s3.upload(uploadParams180).promise();
-      const path ='uploads/'+fileName+'-180.webp';
-      fs.unlinkSync(path);
-    });
+    // }).toBuffer().then(async b => {
+    //   const uploadParams180 = {
+    //     Bucket: bucketName,
+    //     Body: b,
+    //     Key:  fileName+'-180.webp'
+    //   };
+    //   const a = await  s3.upload(uploadParams180).promise();
+    //   const path ='uploads/'+fileName+'-180.webp';
+    //   fs.unlinkSync(path);
+    // });
 
-    await  sharp(fs.readFileSync(file.path)).resize(
-      {
-        height :  100,
-        width : 100,
-      }).
-    toFormat('webp')
-    .toFile(`${fileName}-100.webp`, (err, info) => {
+    // await  sharp(fs.readFileSync(file.path)).resize(
+    //   {
+    //     height :  100,
+    //     width : 100,
+    //   }).
+    // toFormat('webp')
+    // .toFile(`${fileName}-100.webp`, (err, info) => {
 
-        if (err) {
-            console.log("err => ", err);
-        }
+    //     if (err) {
+    //         console.log("err => ", err);
+    //     }
 
-        // console.log("info =>" , info);
+    //     // console.log("info =>" , info);
 
-    }).toBuffer().then(async b => {
-      const uploadParams100 = {
-        Bucket: bucketName,
-        Body: b,
-        Key: fileName+'-100.webp'
-      };
-      const a = await  s3.upload(uploadParams100).promise();
-      const path ='uploads/'+fileName+'-100.webp';
-      fs.unlinkSync(path);
-    });
+    // }).toBuffer().then(async b => {
+    //   const uploadParams100 = {
+    //     Bucket: bucketName,
+    //     Body: b,
+    //     Key: fileName+'-100.webp'
+    //   };
+    //   const a = await  s3.upload(uploadParams100).promise();
+    //   const path ='uploads/'+fileName+'-100.webp';
+    //   fs.unlinkSync(path);
+    // });
 
     
 
