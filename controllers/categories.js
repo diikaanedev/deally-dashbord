@@ -38,6 +38,8 @@ exports.home = async (req, res, next) => {
             let list = categoriesList.map((item) => {
                 return {
                     title: item.title,
+                    titleFrench: item.tiltleFrench,
+                    contries: item.contries,
                     id: item._id.toString().substring(0, 6),
                     idNormal: item._id.toString(),
                     idParent: item.parent == undefined ? "00" : item.parent.toString ,
@@ -60,7 +62,7 @@ exports.home = async (req, res, next) => {
             });
            
 
-            console.log(listSelect);
+            // console.log(listSelect);
 
 
             return res.render('categorie', {
@@ -98,6 +100,8 @@ exports.add = async (req, res, next) => {
         const categorie = categorieModel();
 
         categorie.title = req.body.title;
+        categorie.tiltleFrench = req.body.tiltleFrench;
+        categorie.contries = req.body.contries;
         
         categorie.slug = slugF(req.body.title);
 
@@ -147,6 +151,8 @@ exports.edit  = async (req, res, next) => {
         console.log(req.body.parent);
 
         categorie.title = req.body.title;
+        categorie.tiltleFrench = req.body.tiltleFrench;
+        categorie.contries = req.body.contries;
 
         categorie.is_lock = req.body.status == "active" ? false : true;
 

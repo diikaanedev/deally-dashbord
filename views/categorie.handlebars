@@ -211,7 +211,7 @@
                                             <ul class="dropdown-items__list">
                                                 <li class="dropdown-items__item"><a
                                                         class="dropdown-items__link data-update "
-                                                        data-value="{{idNormal}}|{{title}}|{{statusCategorie}}|{{idParent}}"
+                                                        data-value="{{idNormal}}|{{title}}|{{statusCategorie}}|{{idParent}}|{{titleFrench}}|{{contries}}"
                                                         id="modifier" data-modal="#editProduct"><span
                                                             class="dropdown-items__link-icon">
                                                             <svg class="icon-icon-view">
@@ -265,6 +265,36 @@
                                     <label class="form-label">Categorie Name</label>
                                     <div class="input-group">
                                         <input class="input" name="title" type="text" placeholder="" value="" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 form-group form-group--lg">
+                                    <label class="form-label">Categorie Name French</label>
+                                    <div class="input-group">
+                                        <input class="input" name="tiltleFrench" type="text" placeholder="" value="" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 form-group form-group--lg">
+                                    <label class="form-label">Contry Categorie</label>
+                                    <div class="input-group input-group--append">
+                                        <select name="contries" class="input js-input-select input--fluid multiple"  multiple="true"
+                                            data-placeholder="">
+                                          
+                                            <option  value="NG" >Nigeria
+                                            </option>
+                                            <option  value="GN" >Guinee
+                                            </option>
+                                            <option  value="SN" >Senegal
+                                            </option>
+                                            <option  value="CI" >Côte d'Ivoire
+                                            </option>
+
+
+                                        </select><span class="input-group__arrow">
+                                            <svg class="icon-icon-keyboard-down">
+                                                <use xlink:href="#icon-keyboard-down"></use>
+                                            </svg></span>
                                     </div>
                                 </div>
 
@@ -363,6 +393,35 @@
                                     <div class="input-group">
                                         <input class="input" id="titleEdit" name="title" type="text" placeholder=""
                                             value="" required>
+                                    </div>
+                                </div>
+                                 <div class="col-12 form-group form-group--lg">
+                                    <label class="form-label">Categorie Name French</label>
+                                    <div class="input-group">
+                                        <input class="input" id="titleEditFrench" name="tiltleFrench" type="text" placeholder=""
+                                            value="" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 form-group form-group--lg">
+                                    <label class="form-label">Contry Categorie</label>
+                                    <div class="input-group input-group--append">
+                                        <select name="contries" id="contries" class="input js-input-select input--fluid multiple"  multiple="true"
+                                            data-placeholder="">
+                                          
+                                            <option  value="NG" >Nigeria
+                                            </option>
+                                            <option  value="GN" >Guinee
+                                            </option>
+                                            <option  value="SN" >Senegal
+                                            </option>
+                                            <option  value="CI" >Côte d'Ivoire
+                                            </option>
+
+
+                                        </select><span class="input-group__arrow">
+                                            <svg class="icon-icon-keyboard-down">
+                                                <use xlink:href="#icon-keyboard-down"></use>
+                                            </svg></span>
                                     </div>
                                 </div>
                                 <div class="col-12 form-group form-group--lg">
@@ -465,6 +524,8 @@
         console.log(data);
         $('#form-data-update').attr('action', '/categories/edit/' + data.split('|')[0]);
         $('#titleEdit').attr('value', data.split('|')[1]);
+        $('#titleEditFrench').attr('value', data.split('|')[4]);
+        $('#contries').attr('value', data.split('|')[5]);
         $('#optionSelected').attr('value', data.split('|')[1]);
         
 
